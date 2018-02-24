@@ -757,7 +757,7 @@ userdel命令用于删除用户，格式为“userdel [选项] 用户名”。
     - gpasswd -A
 
 - groupadd，创建组
-
+- groupdel， 删除组
 - su, sudo
     - su 切换用户， su - guest_hello 完全切换，环境变量完全更新，不带“-” 则不更新环境变量
     - sudo sudo命令用于给普通用户提供额外的权限来完成原本root管理员才能完成的任务，格式为“sudo [参数] 命令名称”。sudo服务中可用的参数以及相应的作用下表所示。
@@ -768,12 +768,13 @@ userdel命令用于删除用户，格式为“userdel [选项] 用户名”。
 - /etc/passwd
 - 查询当前用户 whoami
 - 查看用户列表 cat /etc/passwd | grep {{useid}}  查询用户组 cat /etc/group
-- 查看当前登录用户，查看当前所在组 groups
+- groups 查看当前登录用户，查看当前所在组
 - 更改用户 chown -R ${username} ${file||directory}
 - change authority
 - 创建组 groupadd ${groupName}
 - 修改用户账户 usermod
 - 添加用户到组 usermod -aG ${groupName}
+- 设置用户组 usermod -g {groupname} {user}
 
 ## 查询时间
 - date
