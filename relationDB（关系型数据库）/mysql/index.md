@@ -11,10 +11,19 @@
     5. 启动mysql
     6. 5.7 mysql 启动了以后初始化密码sudo grep 'temporary password' /var/log/mysqld.log，
     7. mysql -u root -p 登录以后修改密码
+    - ALTER USER 'root'@'%' IDENTIFIED BY '-pl,0okm';#如果有密码安全级别 Your password does not satisfy the current policy requirements
+    - 修改密码安全级别, set global validate_password_policy=0
+```
+Policy	Tests Performed
+0 or LOW 	Length
+1 or MEDIUM 	Length; numeric, lowercase/uppercase, and special characters
+2 or STRONG 	Length; numeric, lowercase/uppercase, and special characters; dictionary file
+```
   - [使用二进制文件安装](https://dev.mysql.com/doc/refman/5.6/en/binary-installation.html)
   - windows 下载msi 安装包直接安装
 ## [INFORMATION_SCHEMA Tables(mysql 数据库 信息数据库)](https://dev.mysql.com/doc/refman/5.7/en/information-schema.html)
   - INFORMATION_SCHEMA provides access to database metadata, information about the MySQL server such as the name of a database or table, the data type of a column, or access privileges. Other terms that are sometimes used for this information are data dictionary and system catalog.
+# mysql 配置文件 /etc/my.cnf
 
 ## 慢查询日志
 1. 开启慢查询，设置变量
