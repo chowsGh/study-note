@@ -28,7 +28,12 @@ Policy	Tests Performed
 ## 慢查询日志
 1. 开启慢查询，设置变量
   - show variables like '%slow%';  
-  - slow_query_log_file
+  - slow_query_log_file="/var/log/slow_query.log", slow_query_log=ON|OFF 或者(1|0)
+  - long_query_time=2.0 查询时间超过这个值就会被记录下载
+  - 如果在my.cnf 里面设置了以后 重启mysql 就会根据 my.cnf里的参数来设置。
+  - 也可以 设置全局 变量 set global slow_query_log_file="/var/log/slow.log"
+  - 如果设置on 后没有 开启慢查询，则检查my.cnf 里面配置的 error_log 的异常日志文件 例如 /var/log/mysqld.log 查看异常
+  - [慢查询 linux 权限问题](http://blog.csdn.net/reblue520/article/details/50824702)
 2. 生成慢查询日志
 3. 分析慢查询日志
   - 通用环境
@@ -191,7 +196,10 @@ show INFORMATION_SCHEMA
 - sleep({{x}}) :查询暂停{{x}}s
     - select sleep({{x}});
 # 常用逻辑
-    - 组内排序
+    - 组内排序，可以使用max(datetime, int) 来实现，或者使用子查询，查询
 # 基本数据结构
     - text
     - blob
+# 其他
+- 条件选择 case when {{condition}} then {{value1}} else {{value2}} end
+    - 可以在select 中使用  例如  select case when 1 > 2 then '1 less then 2' else '1 greater then 2' end;
