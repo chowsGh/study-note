@@ -3,7 +3,7 @@
   - yum -y install epel-release
 - yum install
 - yum update
-- 安装开发环境 gcc 等 yum groupinstall "Development Tools"
+- **安装开发环境 gcc 等 yum groupinstall "Development Tools"**
 - 查看是否安装 yum list installed | grep ffmpeg
 
 ## ssh 服务
@@ -289,6 +289,8 @@ maxmemory 1024mb
   8. redis-cli 客户端命令
     - info redis相关信息
   9. 查看redis 版本redis-server --version，redis-cli 同理
+  
+  可视化工具 Redis Desktop Manager windows
 - mongodb
 - nodejs
   - [使用包管理工具安装](https://nodejs.org/en/download/package-manager/)
