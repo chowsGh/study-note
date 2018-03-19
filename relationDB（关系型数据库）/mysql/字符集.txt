@@ -1,3 +1,4 @@
+[TOC]
 # [官方文档](https://dev.mysql.com/doc/refman/5.7/en/charset.html)
 ## Character Sets(编码集) and Collations（字符顺序） in General
 编码集是字符符号和编码的映射表，字符顺序是字符的顺序例如：bin按二进制编码顺序，ci字符大小写非敏感，cs字符大小写敏感。
