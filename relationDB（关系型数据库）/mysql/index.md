@@ -12,7 +12,9 @@
     - shell> sudo yum-config-manager --enable mysql56-community
 
   4. a. 也可以创建mysql 的repo
+
   5. b. 检查可以安装的mysql yum repolist enabled | grep mysql
+
   6. 查看可以安装的 mysql 包名，yum list | grep mysql ，然后安装mysql yum install mysql-community-server
   7. 启动mysql
   8. 5.7 mysql 启动了以后初始化密码sudo grep 'temporary password' /var/log/mysqld.log，
@@ -28,6 +30,7 @@
     ```
 
 - [使用二进制文件安装](https://dev.mysql.com/doc/refman/5.6/en/binary-installation.html)
+
 - windows 下载msi 安装包直接安装
 
   ## [INFORMATION_SCHEMA Tables(mysql 数据库 信息数据库)](https://dev.mysql.com/doc/refman/5.7/en/information-schema.html)
@@ -49,6 +52,7 @@
   - [慢查询 linux 权限问题](http://blog.csdn.net/reblue520/article/details/50824702)
 
 2. 生成慢查询日志
+
 3. 分析慢查询日志
 
   - 通用环境
@@ -211,6 +215,10 @@ show INFORMATION_SCHEMA
 
 # mysql 函数
 
+- locate 类似indexOf
+
+  - SELECT * FROM `blkg-show-province-demo`.ai_song where locate('10006', concat(Label1,Label2,Label3,Label4,Label5)) > 0;
+
 - concat
 
   - concat(str1, str2,...),如果有任何一个参数为null，则返回值为null。
@@ -220,6 +228,7 @@ show INFORMATION_SCHEMA
   - concat_ws({{separator}}, str1, str2, ...)
 
 - group_concat
+
 - substring | SUBSTRING_INDEX
 
   - SELECT SUBSTRING('foobarbar' FROM 4);
@@ -228,7 +237,9 @@ show INFORMATION_SCHEMA
   - str=www.google.com; substring_index(substring_index(str,'.',-2),'.',1);
 
 - max|min
+
 - first|last
+
 - avg
 - sum
 - length
@@ -249,6 +260,7 @@ show INFORMATION_SCHEMA
     # 基本数据结构
 
   - text
+
   - blob
 
     # 其他
