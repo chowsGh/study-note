@@ -1,18 +1,13 @@
-# spring framework
-æ˜¯ä¸€ä¸ªioc å®¹å™¨ï¼Œæä¾›æ³¨å…¥åŠŸèƒ½ã€‚
-
-## Web é›†æˆ
-åœ¨ tomcatâ€œweb.xmlâ€ä¸­åŠ å…¥ä¸Šä¸‹æ–‡ç›‘å¬å™¨
-```
-<!-- é…ç½®ä¸Šä¸‹æ–‡ é…ç½®æ–‡ä»¶ -->
-<context-param>  
-	<param-name>contextConfigLocation</param-name>  
- 	<param-value>  
-     classpath:applicationContext.xml  
-	</param-value>  
-</context-param>
-<!-- é…ç½®ç›‘å¬å™¨ -->
-<listener>    
- <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>   
-</listener>
-```
+# ¹Ø¼üÄÚÈİ
+- spring ¼¯³É tomcat
+    - listener
+    - encode filter
+    - url-pattern ÅäÖÃ / /** /a* /a*.html /*.do /test.*
+- spring ioc ÅäÖÃ
+- spring mvc ÅäÖÃ
+    - ÅäÖÃDispatchServlet Æ¥ÅäÂ·¾¶
+    - ¾²Ì¬×ÊÔ´Â·¾¶ÅäÖÃ mvc:resources 
+    - À¹½ØÆ÷ mvc:interceptors
+    - ×ÊÔ´ÊÓÍ¼ÅäÖÃ
+    - Òì³£²¶»ñÅäÖÃ
+    - url-pattern ÅäÖÃ /** /* /test*/**
