@@ -1,4 +1,5 @@
 # 使用tomcat 插件运行web项目
+![a](./1.jpg)
 0. pom.xml 配置
 ```
 <build>
